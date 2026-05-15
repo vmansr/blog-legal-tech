@@ -1,0 +1,112 @@
+:root {
+    --primario: #2980b9;
+    --oscuro: #2c3e50;
+    --texto: #333;
+    --gris-claro: #f4f7f6;
+    --blanco: #ffffff;
+    --sombra: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--oscuro);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { color: white; font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--primario); }
+
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: #bdc3c7; text-decoration: none; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: white; }
+
+/* Grid Blog */
+.hero { text-align: center; padding: 60px 0 30px; }
+.grid-blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta:hover { transform: translateY(-5px); }
+
+.tarjeta-contenido { padding: 25px; flex-grow: 1; }
+
+.categoria {
+    color: var(--primario);
+    font-weight: bold;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: block;
+    background: var(--primario);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+/* Estilos de Entrada Completa */
+.entrada-completa {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: var(--sombra);
+}
+
+blockquote {
+    margin: 25px 0;
+    padding: 20px;
+    border-left: 5px solid var(--primario);
+    background: #f9f9f9;
+    font-style: italic;
+}
+
+.btn-volver { color: var(--primario); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+
+/* Footer */
+.main-footer {
+    background: var(--oscuro);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
